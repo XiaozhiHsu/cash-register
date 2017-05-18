@@ -37,9 +37,14 @@ class CashRegister{
     }
 
     public function checkout(){
-        array_reduce($this->item_list, function($reuslt,$item){
+        $total = 0;
+        $total = array_reduce($this->item_list, function($total,$item) {
             $item->printer();
+            return $total += $item->getAmount();
         });
+
+        $total = number_format($total,2);
+        echo '总计:'.$total.PHP_EOL;
         echo '--------------------'.PHP_EOL;
     }
 }

@@ -21,4 +21,8 @@ class Item{
             ' * '.$this->number.$this->product->getUnitLabel().' = '.number_format($this->product->getPrice()*$this->number,2).PHP_EOL;
     }
 
+    public function getAmount(){
+        return number_format($this->product->getPrice() * $this->number,2);
+    }
+
 }
