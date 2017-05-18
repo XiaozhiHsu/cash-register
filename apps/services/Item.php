@@ -22,7 +22,14 @@ class Item{
     }
 
     public function getAmount(){
-        return number_format($this->product->getPrice() * $this->number,2);
+        $policy = PolicyFactory::create( $this->product->getSerialNumber() );
+        $amount = $policy->getAmount($this->product->getPrice(),$this->number);
+
+        return number_format($amount,2);
+    }
+
+    public function incr( $number = 0){
+        $this->number = $this->number + $number;
     }
 
 }

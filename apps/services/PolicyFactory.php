@@ -6,16 +6,16 @@
 namespace App\Services;
 
 
-class ProductFactory{
+class PolicyFactory{
 
     public static function create( $serial_number ){
         switch ( $serial_number ) {
             case 'MEI0001':
-                return new Product('苹果',12.00,'斤','MEI0001');
+                return new DonatePolicy(2);
                 break;
 
             case 'MEI0002':
-                return new Product('可乐',3.00,'瓶','MEI0002');
+                return new DiscountPolicy(95);
                 break;
 
             default:
@@ -24,3 +24,4 @@ class ProductFactory{
         }
     }
 }
+

@@ -17,10 +17,16 @@ class Product{
     protected $serial_number;
 
 
-    public function __construct( $name, $price, $unit){
+    public function __construct( $name, $price, $unit, $serial_number){
         $this->name  = $name;
         $this->price = $price;
         $this->unit  = $unit;
+        $this->serial_number  = $serial_number;
+    }
+
+
+    public function getSerialNumber(){
+        return $this->serial_number;
     }
 
     public function getName(){
