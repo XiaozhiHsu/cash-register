@@ -5,5 +5,5 @@
 php /apps/cli.php main index
 ```
 
-[[https://github.com/XiaozhiHsu/cash-register/blob/master/static/images/beta_view.png | height = 200px]]
+[[https://github.com/XiaozhiHsu/cash-register/blob/master/static/images/beta_view.png |height=200px]]
 
