@@ -12,17 +12,19 @@ class PolicyFactory{
         switch ( $serial_number ) {
 
             case 'MEI0002':
-                return new DiscountPolicy(95);
+                $policy = new DiscountPolicy(95);
                 break;
 
             case 'MEI0001':
-                return new DonatePolicy(2);
+                $policy =  new DonatePolicy(2);
                 break;
 
             default:
-                return null;
+                $policy = null;
                 break;
         }
+
+        return $policy;
     }
 }
 
