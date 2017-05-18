@@ -17,8 +17,8 @@ class DiscountPolicy{
         return floatval($price * $number * $this->percent / 100);
     }
 
-    public function getFree(  ){
-
+    public function getFree(  $number ,$price ){
+        return floatval($price * $number * (100 - $this->percent)/100);
     }
 
 }

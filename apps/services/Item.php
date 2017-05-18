@@ -30,7 +30,7 @@ class Item{
     }
 
     public function getFree(){
-        return $this->policy->getFree($this->number);
+        return $this->policy->getFree($this->number,$this->product->getPrice());
     }
 
     public function getAmount(){
