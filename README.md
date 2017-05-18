@@ -5,5 +5,20 @@
 php /apps/cli.php main index
 ```
 
-![示例图](https://github.com/XiaozhiHsu/cash-register/blob/master/static/images/beta_view.png)
+命令行交互显示结果如下：
+```
+---------收银机---------
+exit:(退出输入)
+-------------------------
+
+请输入商品二维码:MEI0001
+请输入商品二维码:MEI0001
+请输入商品二维码:MEI0001
+请输入商品二维码:exit
+
+
+苹果:12.00 * 3(斤) = 36.00
+总计:24.00
+--------------------
+```
 
