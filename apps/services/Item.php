@@ -13,7 +13,7 @@ class Item{
 
     public function __construct( Product $product ,$number = 1){
         $this->product = $product;
-        $this->number  = $number;
+        $this->number  = max($number,1);
     }
 
     public function printer(){

@@ -13,12 +13,11 @@ use App\Services\Item;
 class MainTask extends Task{
 
     public function indexAction(){
-        $apple = new Product("苹果",12,"斤");
-        $cola  = new Product("可乐",3,"瓶");
+        // $apple = new Product("苹果",12,"斤");
+        // $cola  = new Product("可乐",3,"瓶");
 
         $cash_register = new CashRegister();
-        $cash_register->addItem( new Item($apple,1) );
-        $cash_register->addItem( new Item($cola,5) );
+        $cash_register->startUp();
         $cash_register->checkout();
     }
 }
