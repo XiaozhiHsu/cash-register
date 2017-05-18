@@ -1,13 +1,8 @@
-#install phpunit
+#收银机－持续更新中
+
 ```
-yum -y install wget
-wget https://phar.phpunit.de/phpunit-4.8.phar
-chmod +x phpunit-4.8.phar
-mv phpunit-4.8.phar /usr/local/bin/phpunit48
+#运行demo
+php /apps/cli.php main index
 ```
 
-#run all test
-```
-cd tests/
-phpunit48 --bootstrap bootstrap.php ./
-```
+
