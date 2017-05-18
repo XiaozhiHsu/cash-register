@@ -17,4 +17,9 @@ class DonatePolicy{
         $donate = intval($number/$this->round);
         return floatval($price * ($number - $donate));
     }
+
+    public function getFree( $number ){
+        $donate = intval($number/$this->round);
+        return $donate;
+    }
 }
