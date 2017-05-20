@@ -10,6 +10,7 @@ use App\Services\Product;
 use App\Services\CashRegister;
 use App\Services\Item;
 
+
 class MainTask extends Task{
 
     public function indexAction(){
