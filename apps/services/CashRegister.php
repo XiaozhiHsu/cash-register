@@ -8,9 +8,7 @@ namespace App\Services;
 
 class CashRegister{
 
-    protected $item_list = [];
-
-    protected $promotion_list = [];
+    protected $product_list = [];
 
     public function startUp(){
         echo "---------收银机---------".PHP_EOL;
@@ -35,14 +33,14 @@ class CashRegister{
 
     public function addItem( $product ,$number ){
         $number = max($number,1);
-        if( isset($this->item_list[ $product->getSerialNumber() ]) )
-            return $this->item_list[ $product->getSerialNumber() ]->incr( $number );
+        if( isset($this->product_list[ $product->getSerialNumber() ]) )
+            return $this->product_list[ $product->getSerialNumber() ]->incr( $number );
 
-        $this->item_list[$product->getSerialNumber()] = new Item($product,$number);
-        return $this->item_list[$product->getSerialNumber()];
+        $this->product_list[$product->getSerialNumber()] = new Item($product,$number);
+        return $this->product_list[$product->getSerialNumber()];
     }
 
     public function checkout(){
-        echo Template::standard( $this->item_list );
+        echo Template::standard( $this->product_list );
     }
 }
